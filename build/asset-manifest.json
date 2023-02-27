@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/japanese-food/static/css/main.128a5ec7.chunk.css",
+    "main.js": "/japanese-food/static/js/main.4a757aa2.chunk.js",
+    "main.js.map": "/japanese-food/static/js/main.4a757aa2.chunk.js.map",
+    "runtime-main.js": "/japanese-food/static/js/runtime-main.466824df.js",
+    "runtime-main.js.map": "/japanese-food/static/js/runtime-main.466824df.js.map",
+    "static/js/2.1050726b.chunk.js": "/japanese-food/static/js/2.1050726b.chunk.js",
+    "static/js/2.1050726b.chunk.js.map": "/japanese-food/static/js/2.1050726b.chunk.js.map",
+    "index.html": "/japanese-food/index.html",
+    "static/css/main.128a5ec7.chunk.css.map": "/japanese-food/static/css/main.128a5ec7.chunk.css.map",
+    "static/js/2.1050726b.chunk.js.LICENSE.txt": "/japanese-food/static/js/2.1050726b.chunk.js.LICENSE.txt",
+    "static/media/sushi.a2b4b921.jpg": "/japanese-food/static/media/sushi.a2b4b921.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.466824df.js",
+    "static/js/2.1050726b.chunk.js",
+    "static/css/main.128a5ec7.chunk.css",
+    "static/js/main.4a757aa2.chunk.js"
+  ]
+}
