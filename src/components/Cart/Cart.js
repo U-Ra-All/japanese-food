@@ -1,10 +1,10 @@
-import Modal from "../UI/Modal";
-import styles from "./Cart.module.css";
-import { useContext, useState } from "react";
-import CartContext from "../../store/cart-context";
-import CartItem from "./CartItem";
-import SubmitOrder from "./SubmitOrder";
-import React from "react";
+import Modal from '../UI/Modal';
+import styles from './Cart.module.css';
+import { useContext, useState } from 'react';
+import CartContext from '../../store/cart-context';
+import CartItem from './CartItem';
+import SubmitOrder from './SubmitOrder';
+import React from 'react';
 
 const Cart = (props) => {
   const [isSubmitOrderAvailable, setIsSubmitOrderAvailable] = useState(false);
@@ -33,9 +33,9 @@ const Cart = (props) => {
     setIsDataSubmitting(true);
 
     await fetch(
-      "https://react-course-http-8220d-default-rtdb.firebaseio.com/orders.json",
+      'https://react-course-http-8220d-default-rtdb.firebaseio.com/orders.json',
       {
-        method: "POST",
+        method: 'POST',
         body: JSON.stringify({
           user: userData,
           orderedMeals: cartContext.items,
@@ -48,7 +48,7 @@ const Cart = (props) => {
   };
 
   const cartItems = (
-    <ul className={styles["cart-items"]}>
+    <ul className={styles['cart-items']}>
       {cartContext.items.map((item) => (
         <CartItem
           key={item.id}
@@ -64,12 +64,12 @@ const Cart = (props) => {
 
   const modalButtons = (
     <div className={styles.actions}>
-      <button className={styles["button--alt"]} onClick={props.onHideCart}>
-        Закрыть
+      <button className={styles['button--alt']} onClick={props.onHideCart}>
+        Закрити
       </button>
       {hasItems && (
         <button className={styles.button} onClick={orderHandler}>
-          Заказать
+          Замовити
         </button>
       )}
     </div>
@@ -79,7 +79,7 @@ const Cart = (props) => {
     <React.Fragment>
       {cartItems}
       <div className={styles.total}>
-        <span>Итого</span>
+        <span>Разом</span>
         <span>{totalAmount}</span>
       </div>
       {isSubmitOrderAvailable && (
@@ -92,14 +92,14 @@ const Cart = (props) => {
     </React.Fragment>
   );
 
-  const dataSubmittingCartModalContent = <p>Отправка данных заказа...</p>;
+  const dataSubmittingCartModalContent = <p>Надсилання даних замовлення...</p>;
 
   const dataWasSubmittedCartModalContent = (
     <React.Fragment>
-      <p>Ваш заказ успешно отправлен!</p>
+      <p>Ваше замовлення успішно відправлено!</p>
       <div className={styles.actions}>
-        <button className={styles["button--alt"]} onClick={props.onHideCart}>
-          Закрыть
+        <button className={styles['button--alt']} onClick={props.onHideCart}>
+          Закрити
         </button>
       </div>
     </React.Fragment>
